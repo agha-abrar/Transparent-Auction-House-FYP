@@ -1,0 +1,191 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure no margins or padding on body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Overall Buyer Dashboard container */
+.buyer-dashboard {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-attachment: fixed;
+  background-image: url("auctionn.png"); 
+  background-color: black(0,0,0,0.6) !important;/* Make sure this is the correct path to your image */
+  background-size: cover; /* Ensure the background image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  padding-top: 120px; /* Push content down under the navbar */
+filter: brightness(0.7);
+}
+
+/* Header styling */
+.buyer-dashboard-header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.buyer-dashboard-header h2 {
+  color: #003366; /* dark blue */
+  margin: 0;
+}
+
+/* Logout button */
+.logout-button {
+  background-color: #ff4d4f; /* red for logout */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.logout-button:hover {
+  background-color: #e0433a;
+}
+
+/* Auction cards container */
+.auction-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px; /* Add top margin if needed */
+  width: 100%; /* Ensure container takes full width */
+}
+
+/* Individual auction card styling */
+.auction-card {
+  background-color:black !important;
+  border: 1px solid #dce4ed;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.auction-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card image styling */
+.auction-card img {
+  width: 100%;
+  height: 200px;
+  object-fit:contain !important;
+}
+
+/* Card content styling */
+.auction-card-content {
+  padding: 15px;
+  color: #ffd700;
+  flex: 1;
+  max: height 50px;
+  margin-bottom: 20px;
+}
+
+.auction-card-content h3 {
+  margin: 0 0 10px;
+  color: #ffd700 !important;
+  font-size: 1.2rem;
+}
+
+.auction-card-content p {
+  margin: 0;
+  color:white !important;
+  font-size: 0.95rem;
+}
+
+/* Profile button inside cards */
+.profile-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+  background-color: #e0e0e0;
+}
+
+.profile-button img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-button span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Ensure navbar is correctly aligned */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Make sure navbar spans the full width */
+  padding: 0 20px; /* Ensure there is no unwanted left/right padding */
+  margin: 0; /* Ensure no margin is added */
+}
+
+/* Navbar's profile and logout buttons */
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.logout-button {
+  background-color: white;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Ensure responsive design for smaller screens */
+@media (max-width: 768px) {
+  .auction-cards-container {
+    flex-direction: column;
+    align-items: center; /* Stack cards vertically on mobile */
+  }
+
+  .auction-card {
+    width: 90%; /* Cards take up 90% of the screen width on mobile */
+  }
+
+  .buyer-dashboard {
+    padding-top: 80px; /* Adjust padding for smaller screens */
+  }
+
+  .buyer-dashboard-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logout-button {
+    width: 100%; /* Ensure logout button takes full width */
+    margin-top: 10px; /* Adjust margin for button on mobile */
+  }
+}

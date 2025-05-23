@@ -1,0 +1,232 @@
+/* Global Reset & Font Smoothing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Fullscreen Background */
+  .adminlogin-background {
+    position: relative;
+    background-image: url("auctionn.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Dark overlay */
+  .adminlogin-background::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+  }
+  
+  /* Admin Login Container */
+  .adminlogin-container {
+    position: relative;
+    z-index: 1;
+    width: 500px;
+    max-width: 90%;
+    padding: 30px;
+    margin: 50px auto;
+    background: rgba(18, 18, 24, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 0.7s ease-in-out;
+  }
+  
+  /* Optional Logo */
+  .admin-logo {
+    width: 60px;
+    margin: 0 auto 20px;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  }
+  
+  /* Heading */
+  .adminlogin-container h2 {
+    text-align: center;
+    color: #ffd700;
+    font-size: clamp(22px, 4vw, 28px);
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* Form Layout */
+  .adminlogin-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* Input Fields */
+  .adminlogin-container input {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #252536;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .adminlogin-container input::placeholder {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .adminlogin-container input:focus {
+    outline: 2px solid #FFD700;
+    background-color:black;
+    box-shadow: 0 0 8px #ffd70080;
+  }
+  .adminlogin-container form input:focus,
+.adminlogin-container form select:focus {
+  border: 1px solid #ffd700;
+  outline: none;
+  transform: translateY(-2px);
+}
+  
+  /* Button */
+  .adminlogin-container button {
+    
+        padding: 12px;
+        margin-top: 20px;
+        width:100%;
+        background-color: #FFD700;
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 14px;
+      }
+      
+  
+  
+  .adminlogin-container button:hover {
+    background: #ffd700;
+    color: #000;
+    box-shadow: 0 0 17px #ffd700cc;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .adminlogin-container {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .adminlogin-container h2 {
+      font-size: 20px;
+    }
+  
+    .adminlogin-container input,
+    .adminlogin-container button {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+  
+  .nav-button-link {
+    padding: 10px;
+    margin-left: 19px;
+    width: 91%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    font-weight: 300px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .nav-button-link:hover {
+    background-color: #ffd700;
+    color: black;
+    box-shadow: 0 0 2px #ffd700aa;
+    transform: scale(1.02);
+      }
+      .nav-button-link {
+        display: inline-block;
+        text-decoration: none;
+      }
+      .home-link-content:hover {
+        background-color: #ffd700;
+        color: black;
+        box-shadow: 0 0 10px #ffd700aa;
+        transform: scale(1.02);
+          }
+          .nav-button-link:hover{
+            background-color: #ffd700;
+            color: black;
+            box-shadow: 0 0 10px #ffd700aa;
+            transform: scale(1.02);
+              }
+
+      .home-link-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px; /* spacing between icon and text */
+        font-weight: 500px;
+        color: #FFD700; /* Yellow */
+        font-size: 20px;
+      }
+      
+      .home-icon {
+        font-size: 20px;
+      }
+      
+  .forgot{
+    color:#ffd700;
+    font-size: large;
+
+  }
+  .forgot:hover{
+
+    
+    transform: scale(1.02);
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

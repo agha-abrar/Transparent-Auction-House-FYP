@@ -1,0 +1,151 @@
+/* Top-level page spacing under the Navbar */
+.auction-detail-page {
+  padding-top: 80px; /* Adjust if your Navbar height changes */
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+
+/* Container to center & limit width */
+.auction-detail-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* Auction Header with back button */
+.auction-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center header content */
+  margin-bottom: 16px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #007bff;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.auction-title {
+  flex: 1;
+  font-size: 1.8rem;
+  margin: 0;
+  text-align: center; /* Ensure the title is centered */
+}
+
+/* Main auction image */
+.auction-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Boxed auction details */
+.auction-info {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.auction-info p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.auction-winner {
+  background: #e0ffe0;
+  padding: 8px;
+  border-radius: 4px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.auction-status {
+  color: #d84315;
+  font-weight: bold;
+}
+
+/* Bids section */
+.bids-container {
+  margin-top: 30px;
+}
+
+.bids-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.bid-item {
+  background: #fff;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.bid-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.bid-username {
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.bid-timestamp {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.bid-amount {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #388e3c;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  .auction-detail-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .auction-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .auction-title {
+    font-size: 1.5rem;
+    text-align: center; /* Ensure title is centered on small screens */
+  }
+
+  .auction-image {
+    max-height: 300px;
+  }
+
+  .bids-container {
+    margin-top: 20px;
+  }
+
+  .bid-item {
+    padding: 8px 12px;
+  }
+
+  .bid-amount {
+    font-size: 1rem;
+  }
+}

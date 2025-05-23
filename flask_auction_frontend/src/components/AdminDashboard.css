@@ -1,0 +1,246 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and background */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f5ff; /* light blue background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the entire dashboard */
+.admin-dashboard {
+  width: 100%;
+  margin-top: 84px;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-image: url("auctionn.png"); /* Ensure the correct path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Dark overlay on background */
+.admin-dashboard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: 0;
+}
+
+/* Main content container */
+.admin-dashboard-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  padding: 30px;
+  background: rgba(18, 18, 24, 0.75); /* Transparent dark background */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px); /* Blurred background effect */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+/* Header styles */
+.admin-dashboard-container h2 {
+  text-align: center;
+  color: #ffd700;
+  font-size: clamp(22px, 4vw, 28px);
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Shill Bidding Alerts Section */
+.alerts-section {
+  margin-top: 40px;
+}
+
+.alerts-section h3 {
+  text-align: center;
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.alerts-section ul {
+  list-style-type: none;
+}
+
+.alerts-section li {
+  background-color: #252536;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alerts-section button {
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.alerts-section button:hover {
+  background-color: #e0433a;
+}
+
+/* Running Auctions Section */
+.auctions-section {
+  margin-top: 40px;
+}
+
+.auctions-section h3 {
+  text-align: center;
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.auctions-section ul {
+  list-style-type: none;
+}
+
+.auctions-section li {
+  background-color: #252536;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.auctions-section h4 {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.auctions-section p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* Keyframe Animation for Fade In */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .admin-dashboard-container {
+      padding: 20px;
+  }
+
+  .alerts-section li, .auctions-section li {
+      padding: 12px;
+      margin: 8px 0;
+  }
+
+  .alerts-section button, .auctions-section button {
+      padding: 8px 12px;
+      font-size: 14px;
+  }
+}
+
+.auction-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.auction-card {
+  width: 300px;
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
+  background-color: #1c1c1c;
+  color: #ffd700;
+  transition: transform 0.3s ease;
+}
+
+.auction-card:hover {
+  transform: scale(1.05);
+}
+
+.auction-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.auction-details {
+  padding: 10px;
+}
+
+.auction-details h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.auction-details p {
+  margin: 5px 0;
+}
+
+.disable-button {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.disable-button:hover {
+  background-color: #ff1f2d;
+}
+
+.admin-dashboard-container {
+  padding: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 10px;
+  border: 1px solid #ffd700;
+  text-align: left;
+}
+
+.admin-table th {
+  background-color: #ffd700;
+}

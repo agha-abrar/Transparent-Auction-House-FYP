@@ -1,0 +1,114 @@
+/* frontend/src/components/SellerDashboard.css */
+
+/* Container for the entire dashboard */
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure no margins or padding on body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Overall Buyer Dashboard container */
+.selller-dashboard {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-image: url("auctionn.png"); /* Make sure this is the correct path to your image */
+  background-size: cover; /* Ensure the background image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  padding-top: 140px; /* Push content down under the navbar */
+}
+.selller-dashboard::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0; 
+}
+
+
+/* Dark overlay on background */
+
+/* Header styles */
+.seller-dashboard h2 {
+  margin-top: 50px;
+  text-align: center;
+  color: #003366; /* dark blue */
+  margin-bottom: 20px;
+}
+
+/* Logout button */
+.logout-button {
+  background-color: #ff4d4f; /* red for logout */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.logout-button:hover {
+  background-color: #e0433a;
+}
+
+/* Auction Cards Container */
+.auction-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px; /* <-- add top margin here too, if you only want to push the cards */
+}
+
+/* Individual Auction Card */
+.auction-card {
+  background-color: #fff;
+  border: 1px solid #dce4ed;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.auction-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image inside card */
+.auction-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Content inside card */
+.auction-card-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.auction-card-content h3 {
+  margin: 0 0 10px;
+  color: #0056b3;
+  font-size: 1.2rem;
+}
+
+.auction-card-content p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}

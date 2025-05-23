@@ -1,0 +1,94 @@
+/* Navbar container */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px; /* Adjusted height */
+    background-color: rgba(0, 0, 0, 1) !important; /* Dark background with transparency */
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    padding: 10px 15px; /* Reduced padding */
+    z-index: 1000;
+    backdrop-filter: blur(6px); /* Blur effect on background */
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2); /* Soft shadow for depth */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px; /* Reduced font size */
+    font-weight: bold;
+    color: #ffd700; /* Golden color */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .brand-text {
+    font-size: 26px; /* Reduced font size */
+    font-weight: bold;
+    color: #ffd700;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .brand-text:hover {
+    color: #ffd700;
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #ffd700, 0 0 12px #ffaa00;
+  }
+  
+  /* Admin Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px; /* Reduced gap */
+    margin-left: 30px; /* Space from the left */
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    color: #ffd700;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffaa00;
+    transform: scale(1.05);
+  }
+  
+  /* Profile Container for Profile and Logout Buttons */
+  .profile-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space from the right */
+  }
+  
+  .log-buttons {
+    background-color: transparent;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    padding: 8px 14px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .log-buttons:hover {
+    background-color: #ffd700;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ffd700cc;
+  }
+  

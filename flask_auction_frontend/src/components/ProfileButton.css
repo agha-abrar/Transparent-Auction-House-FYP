@@ -1,0 +1,45 @@
+.profile-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    max-width: 100px; /* Set a max width based on the picture and name size */
+    padding: 5px;
+    background-color: #f0f0f0; /* Optional, for better visibility */
+    border-radius: 5px;
+    margin-right: 15px; /* Adjust if needed */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Add hover effects with scaling and changing background color */
+  .profile-button:hover {
+    background-color: #e0e0e0;  /* Slight background color change on hover */
+    transform: scale(1.05);  /* Slight scale effect for a pop-up animation */
+  }
+  
+  /* Add smooth transition to the image */
+  .profile-button img {
+    width: 40px;  /* Adjust the size of the profile image */
+    height: 40px;
+    border-radius: 50%;  /* Make it circular */
+    margin-right: 10px;
+    transition: transform 0.3s ease;  /* Add animation for the image */
+  }
+  
+  /* Add hover animation to the image */
+  .profile-button:hover img {
+    transform: rotate(15deg);  /* Slight rotation of the image on hover */
+  }
+  
+  /* Styling for the username text */
+  .profile-button span {
+    font-size: 16px;  /* Font size for the name */
+    font-weight: bold;
+    color: #333;  /* You can change this as per your design */
+    transition: color 0.3s ease;
+  }
+  
+  /* Change text color on hover */
+  .profile-button:hover span {
+    color: #007bff;  /* Change text color to blue on hover */
+  }
+  

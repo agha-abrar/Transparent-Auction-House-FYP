@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.buyer-login-background {
+  position: relative;
+  background-image: url("auctionn.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.buyer-login-background::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+/* Container */
+.buyer-login-container {
+  position: relative;
+    z-index: 1;
+    width: 500px;
+    max-width: 90%;
+    padding: 30px;
+    margin: 50px auto;
+    background: rgba(18, 18, 24, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 0.7s ease-in-out;
+  }
+
+
+/* Heading */
+.buyer-login-container h2 {
+  text-align: center;
+  color: #ffd700;
+  font-size: clamp(22px, 4vw, 28px);
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.buyer-login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.buyer-login-container input {
+  padding: 12px 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #252536;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+
+.buyer-login-container input::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+
+.buyer-login-container input:focus {
+  outline: 2px solid #ffd700;
+  background: black;
+  box-shadow: 0 0 8px #ffd70080;
+}
+.buyer-login-container form input:focus,
+.buyer-login-container form select:focus {
+  border: 1px solid #ffd700;
+  outline: none;
+  transform: translateY(-2px);
+}
+/* Login Button - Primary */
+.buyer-login-container button[type="submit"] {
+  padding: 12px;
+  background-color:transparent;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  width: 100%; /* Ensures same width as back button */
+}
+
+.buyer-login-container button[type="submit"]:hover {
+  background: #ffd700;
+  box-shadow: 0 0 17px #ffd700cc;
+}
+
+/* Nav Buttons */
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; /* Matches login button width */
+}
+
+.nav-buttons button:hover {
+  background-color: #ffd700;
+  color: black;
+  box-shadow: 0 0 10px #ffd700aa;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .buyer-login-container {
+    padding: 30px 20px;
+    width: 90%;
+  }
+
+  .buyer-login-container h2 {
+    font-size: 22px;
+  }
+
+  .buyer-login-container input,
+  .buyer-login-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
